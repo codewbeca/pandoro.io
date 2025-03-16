@@ -1,0 +1,38 @@
+{
+  "name": "pandoro",
+  "version": "1.0.0",
+  "author": "Rebeca Rodriguez",
+  "type": "commonjs",
+  "description": "Pandoro - A Study Timer App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.yourname.pandoro",
+    "productName": "Pandoro",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/pandoro.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/pandoro.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/pandoro.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^25.1.8"
+  }
+}

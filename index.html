@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pandoro - Study Timer</title>
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" 
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header with title, theme toggle and close button -->
+    <header class="app-header">
+      <div class="left-header">
+        <h1>Pandoro</h1>
+      </div>
+      <div class="right-header">
+        <!-- Theme toggle button (sun/moon) -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light/Dark Mode">
+          <span id="theme-icon">☀️</span>
+        </button>
+        <!-- Close button -->
+        <button class="close-btn" id="close-btn" title="Close App">✕</button>
+      </div>
+    </header>
+    
+    <div class="timer-container">
+      <div class="timer-display">
+        <span id="minutes">25</span>:<span id="seconds">00</span>
+      </div>
+      <div class="controls">
+        <button id="start-btn">Start</button>
+        <button id="pause-btn" disabled>Pause</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+    </div>
+    
+    <div class="settings-container">
+      <h2>Study Duration (minutes)</h2>
+      <div class="settings">
+        <input type="number" id="study-duration" value="25" min="1" max="180">
+      </div>
+    </div>
+    
+    <div class="mode-container">
+      <h2>Mode</h2>
+      <div class="modes">
+        <button class="mode-btn active" data-mode="study">Study</button>
+        <button class="mode-btn" data-mode="shortBreak">Short Break (5 min)</button>
+        <button class="mode-btn" data-mode="longBreak">Long Break (10 min)</button>
+      </div>
+    </div>
+    
+    <div class="panda-container">
+      <!-- Cute pastel panda from Unsplash -->
+      <img 
+        src="https://source.unsplash.com/featured/?panda+pink" 
+        alt="Cute Pink Panda" 
+        id="panda-image"
+      >
+    </div>
+  </div>
+  
+  <script src="./renderer.js"></script>
+</body>
+</html>
