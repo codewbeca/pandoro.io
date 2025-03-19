@@ -2,15 +2,14 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
 function createWindow() {
-  // Resolve the icon path correctly:
   const iconPath = path.join(__dirname, 'assets', 'pandoro.ico');
-  console.log('Icon path:', iconPath);  // Check the path in the console
+  console.log('Icon path:', iconPath);  
 
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 500,
     resizable: false,
-    icon: iconPath, // Use the resolved icon path
+    icon: iconPath, 
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
@@ -18,7 +17,7 @@ function createWindow() {
   });
 
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
-  // mainWindow.webContents.openDevTools(); // Uncomment for debugging
+  
 }
 
 app.whenReady().then(() => {
