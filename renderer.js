@@ -120,7 +120,6 @@ closeBtn.addEventListener('click', () => {
 // Toggle dark/light mode on theme toggle click
 themeToggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
-  // Update icon based on mode
   if (document.body.classList.contains('dark-mode')) {
     themeIcon.textContent = '🌙';
   } else {
