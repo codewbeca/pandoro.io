@@ -19,7 +19,7 @@ body {
 
 /* Main container with subtle transparency and rounded corners */
 .app-container {
-  background-color: #ffffffcc; 
+  background-color: #e0d5d5cc; 
   backdrop-filter: blur(6px);
   width: 760px;
   height: 460px;
@@ -44,7 +44,7 @@ body {
 .left-header h1 {
   font-size: 2.5em;
   font-weight: 600;
-  color: #d81b60; /* Deep pink */
+  color:#be6f8c; 
 }
 
 .right-header {
@@ -53,7 +53,7 @@ body {
 }
 
 .close-btn, .theme-toggle-btn {
-  background: #f8bbd0; /* Pastel pink */
+  background: #f8bbd0; 
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -76,7 +76,8 @@ body {
   font-size: 4em;
   margin-bottom: 20px;
   font-weight: 600;
-  color: #d81b60; /* Deep pink */
+  color: #be6f8c; /* Deep pink */
+  margin-bottom: 1rem;
 }
 
 /* Timer control buttons */
@@ -169,6 +170,25 @@ body {
   background-color: #f8bbd0;
   color: #fff;
 }
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 8px;
+  height: 8px;
+  opacity: 0.9;
+  z-index: 9999;
+  border-radius: 2px;
+  animation: confetti-fall 2.5s linear forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotateZ(720deg);
+  }
+}
 
 /* ----------------------------- */
 /* Dark Mode Overrides          */
@@ -218,4 +238,45 @@ body {
 .dark-mode .settings-container h2,
 .dark-mode .mode-container h2 {
   color: #ffb6c1;
+}
+/* Popup Modal Styles */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.popup-content p {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.popup-content button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f8bbd0;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+  background-color: #f06292;
 }
